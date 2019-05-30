@@ -12,6 +12,12 @@
 		D42046BA22A009E30042FDA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42046B822A009E30042FDA7 /* Main.storyboard */; };
 		D42046BC22A009E40042FDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D42046BB22A009E40042FDA7 /* Assets.xcassets */; };
 		D42046BF22A009E40042FDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42046BD22A009E40042FDA7 /* LaunchScreen.storyboard */; };
+		D42046C822A009F80042FDA7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42046C722A009F80042FDA7 /* CoreLocation.framework */; };
+		D42046CA22A0429B0042FDA7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42046C922A0429B0042FDA7 /* LocationManager.swift */; };
+		D42046CC22A04D8F0042FDA7 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42046CB22A04D8F0042FDA7 /* ActivityManager.swift */; };
+		D42046CE22A04DA00042FDA7 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42046CD22A04DA00042FDA7 /* CoreMotion.framework */; };
+		D42046D022A04DD30042FDA7 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42046CF22A04DD30042FDA7 /* UserNotifications.framework */; };
+		D42046D222A04E1A0042FDA7 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42046D122A04E1A0042FDA7 /* Notifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		D42046BB22A009E40042FDA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D42046BE22A009E40042FDA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D42046C022A009E40042FDA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D42046C722A009F80042FDA7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D42046C922A0429B0042FDA7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D42046CB22A04D8F0042FDA7 /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
+		D42046CD22A04DA00042FDA7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		D42046CF22A04DD30042FDA7 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		D42046D122A04E1A0042FDA7 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42046D022A04DD30042FDA7 /* UserNotifications.framework in Frameworks */,
+				D42046CE22A04DA00042FDA7 /* CoreMotion.framework in Frameworks */,
+				D42046C822A009F80042FDA7 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +55,7 @@
 			children = (
 				D42046B322A009E30042FDA7 /* location-practice */,
 				D42046B222A009E30042FDA7 /* Products */,
+				D42046C622A009F80042FDA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +72,25 @@
 			children = (
 				D42046B422A009E30042FDA7 /* AppDelegate.swift */,
 				D42046B622A009E30042FDA7 /* ViewController.swift */,
+				D42046C922A0429B0042FDA7 /* LocationManager.swift */,
+				D42046CB22A04D8F0042FDA7 /* ActivityManager.swift */,
+				D42046D122A04E1A0042FDA7 /* Notifications.swift */,
 				D42046B822A009E30042FDA7 /* Main.storyboard */,
 				D42046BB22A009E40042FDA7 /* Assets.xcassets */,
 				D42046BD22A009E40042FDA7 /* LaunchScreen.storyboard */,
 				D42046C022A009E40042FDA7 /* Info.plist */,
 			);
 			path = "location-practice";
+			sourceTree = "<group>";
+		};
+		D42046C622A009F80042FDA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D42046CF22A04DD30042FDA7 /* UserNotifications.framework */,
+				D42046CD22A04DA00042FDA7 /* CoreMotion.framework */,
+				D42046C722A009F80042FDA7 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42046D222A04E1A0042FDA7 /* Notifications.swift in Sources */,
+				D42046CC22A04D8F0042FDA7 /* ActivityManager.swift in Sources */,
 				D42046B722A009E30042FDA7 /* ViewController.swift in Sources */,
 				D42046B522A009E30042FDA7 /* AppDelegate.swift in Sources */,
+				D42046CA22A0429B0042FDA7 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
